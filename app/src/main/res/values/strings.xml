@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">SoftSquared Android Kotlin Template</string>
+
+    <!-- Naming Rules -->
+    <!-- 도메인명_컴포넌트함축어_용도(=목적) -->
+
+    <!-- Common -->
+
+    <!-- Main -->
+    <string name="main_btm_nav_home_title">홈</string>
+    <string name="main_btm_nav_my_page_title">프로필</string>
+
+    <!-- Home -->
+    <string name="home_btn_try_get_http_method">GET API 보내기</string>
+    <string name="home_btn_try_post_http_method">POST API 보내기</string>
+    <string name="home_et_id">아이디를 입력하세요.</string>
+    <string name="home_et_pw">비밀번호를 입력하세요.</string>
+
+    <!-- Profile -->
+    <string name="expiry">식상해</string>
+    <string name="other_login"><u>다른 방식으로 로그인</u></string>
+    <string name="nickname">앞으로 사용될 별명입니다!\n신중하게 입력해주세요</string>
+
+    <string name="social_login_info_naver_client_id">o3UsmTVEYGORAREFn9w_</string>
+    <string name="social_login_info_naver_client_secret">iEQtOrGEHZ</string>
+    <string name="social_login_info_naver_client_name">네이버아이디 로그인</string>
+    <string name="refrisname">추가할 냉장고의 별명을 붙여주세요!</string>
+    <string name="addrefrisHint">우리 집 냉장고</string>
+    <string name="enter">확인</string>
+    <string name="refrisList">Client님의 냉장고 목록</string>
+    <string name="addrefrig">설정 완료</string>
+    <string name="price">가격</string>
+    <string name="foodsname">식품명</string>
+    <string name="expirydate">소비기한</string>
+    <string name="refrigname">냉장고이름</string>
+    <string name="category">카테고리 선택</string>
+    <string name="memo">메모</string>
+    <string name="family">가족</string>
+    <string name="myroom">자취방</string>
+    <string name="etc">기타</string>
+    <string name="gotoaddeats">식품 등록하러 가기</string>
+    <string name="기숙사">기숙사</string>
+    <string name="nomoreeats">등록된 식품이 없습니다</string>
+    <string name="eatsname">식품이름</string>
+    <string name="profileedit"><u>로그아웃</u></string>
+    <string name="nickN">NICKNAME</string>
+    <string name="live">접속중</string>
+    <string name="myref">나만의 냉장고</string>
+    <string name="zero">0</string>
+    <string name="friends">내 친구</string>
+    <string name="eatsinfo">상세내용 (최대 500자)</string>
+    <string name="scan"><u>스캔하기</u></string>
+    <string name="slash">/</string>
+    <string name="maxThousand">1000</string>
+    <string name="maxFive00">500</string>
+    <string name="result">결과</string>
+    <string name="addeats">식품추가</string>
+    <string name="msg_token_fmt">Fetching FCM registration token successed</string>
+    <string name="follower">팔로워</string>
+    <string name="following">팔로잉</string>
+    <string name="editNickname">닉네임수정</string>
+    <string name="editUsersInfo">회원정보수정</string>
+    <string name="alert">알림설정</string>
+    <string name="client">고객문의</string>
+    <string name="deleteUser">회원탈퇴</string>
+    <string name="vegitable">채소</string>
+    <string name="meat">고기</string>
+    <string name="drink">음료</string>
+    <string name="freezer">냉동고</string>
+    <string name="refrigerator">냉장고</string>
+    <string name="text1">text1</string>
+    <string name="close">닫기</string>
+    <string name="finish">완료</string>
+    <string name="alertFCM">알림 울려보기</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="inputNick">사용할 별명을 입력해주세요!</string>
+    <string name="inputProfile">프로필 사진을 선택해주세요!</string>
+    <string name="nick">별명</string>
+    <string name="refrisName">냉장고이름</string>
+
+</resources>

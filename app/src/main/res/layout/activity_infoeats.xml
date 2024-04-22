@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/cl_parent_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context=".src.main.refrige.InfoEatsActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgray">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintBottom_toTopOf="@+id/main_scroll_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:id="@+id/collapse_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="80sp"
+                android:layout_marginTop="80sp"
+                android:background="@color/white"
+                android:fitsSystemWindows="true"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                app:titleEnabled="false">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/ll_appbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_go_back"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_marginStart="20sp"
+                        android:layout_marginBottom="5sp"
+                        android:background="@drawable/ripple_circle_button"
+                        android:backgroundTint="@color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_left_arrow"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_edit"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="20sp"
+                        android:layout_marginBottom="5sp"
+                        android:background="@drawable/ripple_circle_button"
+                        android:backgroundTint="@color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_edit"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/btn_delete"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/btn_delete"
+                        android:layout_width="30sp"
+                        android:layout_height="30sp"
+                        android:layout_marginEnd="20sp"
+                        android:layout_marginBottom="5sp"
+                        android:background="@drawable/ripple_circle_button"
+                        android:backgroundTint="@color/transparent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_trash"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.expiry.template.kotlin.config.NewScrollView
+            android:id="@+id/main_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80sp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_set_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/top_radius2_background"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/linear_layout_see_all"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:orientation="horizontal">
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="320sp"
+                    android:layout_height="320sp"
+                    android:adjustViewBounds="true"
+                    android:layout_margin="20sp"
+                    android:layout_gravity="center"
+                    app:cardCornerRadius="15sp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_eats_img"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:imeOptions="actionDone"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_baseline_image_24"
+                        android:background="@color/transparent"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </androidx.cardview.widget.CardView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7sp"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginBottom="16sp"
+                    android:background="@color/darkgray" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="13sp"
+                    android:layout_marginEnd="20sp">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tv_eats_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:background="@color/transparent"
+                        android:imeOptions="actionDone"
+                        android:letterSpacing="-0.03"
+                        android:text="@string/eatsname"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/gray"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btn_fcm_test"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:background="@drawable/ripple_radius4_background"
+                        android:backgroundTint="@color/black"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:text="@string/alertFCM"
+                        android:paddingStart="15sp"
+                        android:paddingEnd="15sp"
+                        />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7sp"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginBottom="16sp"
+                    android:background="@color/lightgray" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eats_expiry"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="13sp"
+                    android:layout_marginEnd="20sp"
+                    android:background="@color/transparent"
+                    android:text="@string/expirydate"
+                    android:imeOptions="actionDone"
+                    android:letterSpacing="-0.03"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:inputType="date"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7sp"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="16sp"
+                    android:layout_marginEnd="20sp"
+                    android:layout_marginBottom="16sp"
+                    android:background="@color/lightgray" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_eats_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="300sp"
+                    android:layout_marginStart="20sp"
+                    android:layout_marginTop="13sp"
+                    android:layout_marginEnd="20sp"
+                    android:background="@color/transparent"
+                    android:text="@string/eatsinfo"
+                    android:imeOptions="actionDone"
+                    android:letterSpacing="-0.03"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/gray"
+                    android:gravity="top"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:inputType="text"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+        </com.expiry.template.kotlin.config.NewScrollView>
+
+<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--            android:id="@+id/cl_down_btn2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="125sp"-->
+<!--            android:layout_marginTop="600sp"-->
+<!--            android:background="@color/white"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/appbarlayout"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_finish"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="46dp"-->
+<!--                android:layout_margin="18sp"-->
+<!--                android:background="@drawable/ripple_radius4_background"-->
+<!--                android:text="@string/addrefrig"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="15sp"-->
+<!--                android:textStyle="bold"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent"-->
+<!--                tools:ignore="TouchTargetSizeCheck" />-->
+
+<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

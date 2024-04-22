@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/cl_homeFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightgray"
+    tools:context=".src.main.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_title_section"
+        android:layout_width="match_parent"
+        android:layout_height="80sp"
+        android:layout_marginTop="35sp"
+        android:layout_marginStart="20sp"
+        android:layout_marginEnd="20sp"
+        android:background="@color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_my_profile"
+            android:layout_width="48sp"
+            android:layout_height="48sp"
+            android:background="@drawable/circle_radius_background"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_my_profile_thin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/refrisList"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.expiry.template.kotlin.config.NewScrollView
+        android:id="@+id/sv_rvRefris"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cl_title_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15sp"
+            android:layout_marginEnd="15sp"
+            android:layout_marginTop="10sp"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_refris"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_rv_grid_double" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btn_fabMain"
+                android:layout_width="match_parent"
+                android:layout_height="70sp"
+                android:layout_marginStart="3sp"
+                android:layout_marginEnd="3sp"
+                android:background="@drawable/ripple_radius4_stroke_background"
+                android:backgroundTint="@color/black"
+                android:src="@drawable/ic_add_carrot"
+                android:layout_marginBottom="200sp" />
+
+        </LinearLayout>
+
+    </com.expiry.template.kotlin.config.NewScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
